@@ -1,14 +1,20 @@
-import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
-import {Button} from 'antd';
+import React, {Component,Fragment} from 'react';
+import {HashRouter,Route,Switch} from "react-router-dom";
+import Login from "./view/login/Login";
+// import {Provider} from "react-redux"
 
-function App() {
-  return (
-    <div className="App">
-        <Button type="primary">点击</Button>
-    </div>
-  );
+class App extends Component{
+    render() {
+        return(
+            <Fragment>
+                <HashRouter>
+                    <Switch>
+                        <Route exact path="/" component={Login}/>
+                    </Switch>
+                </HashRouter>
+            </Fragment>
+        )
+    }
 }
 
 export default App;
